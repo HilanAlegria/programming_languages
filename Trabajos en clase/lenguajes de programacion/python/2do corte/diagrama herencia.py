@@ -1,8 +1,6 @@
 from abc import ABC, abstractmethod
 
-# -------------------------------
-# Clase abstracta Empleado
-# -------------------------------
+
 class Empleado(ABC):
     def __init__(self, nombre: str, id_empleado: int):
         self.nombre = nombre
@@ -31,10 +29,6 @@ class EmpleadoPorHoras(Empleado):
     def calcular_pago(self):
         return self.horas * self.tarifa
 
-
-# -------------------------------
-# Clase abstracta Notificación
-# -------------------------------
 class Notificacion(ABC):
     def __init__(self, mensaje: str, destinatario: str):
         self.mensaje = mensaje
@@ -61,22 +55,16 @@ class NotificacionSMS(Notificacion):
         print("------------------\n")
 
 
-# -------------------------------
-# Ejemplo de integración
-# -------------------------------
 if __name__ == "__main__":
-    # Crear empleados
+
     emp1 = EmpleadoTiempoCompleto("Ana", 1, 3000)
     emp2 = EmpleadoPorHoras("Luis", 2, 120, 25)
 
-    # Calcular sus pagos
     pago1 = emp1.calcular_pago()
     pago2 = emp2.calcular_pago()
 
-    # Crear notificaciones (se heredan los métodos abstractos)
     noti1 = NotificacionEmail(f"Hola {emp1.nombre}, tu pago es ${pago1}.", "ana@email.com")
     noti2 = NotificacionSMS(f"Hola {emp2.nombre}, tu pago es ${pago2}.", "+123456789")
 
-    # Enviar notificaciones
     noti1.enviar()
     noti2.enviar()

@@ -23,9 +23,8 @@ class NotificacionSMS(Notificacion):
         print(f"Mensaje: {self.mensaje}")
         print("-----------------\n")
 
-# Ejemplo de uso:
 if __name__ == "__main__":
     email = NotificacionEmail("Hola, ¿cuando me traes mis croquetas?.", "ungatoconinternet@email.com")
-    sms = NotificacionSMS("Hola, que no se te olviden mis croquetas.", "+123456789")
+    sms = NotificacionSMS("Hola, que no se te olviden mis croquetas Miau.", "+7777777777")
     email.enviar()
     sms.enviar()

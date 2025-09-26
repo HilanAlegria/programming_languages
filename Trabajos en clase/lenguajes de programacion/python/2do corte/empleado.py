@@ -34,11 +34,10 @@ class EmpleadoPrestacionServicios(Empleado):
     def calcular_pago(self):
         return self.monto_contrato
 
-# Ejemplo de uso:
 if __name__ == "__main__":
-    emp1 = EmpleadoTiempoCompleto("Ana", 1, 3000)
-    emp2 = EmpleadoTiempoMedido("Luis", 2, 120, 25)
-    emp3 = EmpleadoPrestacionServicios("Carlos", 3, 5000)
+    emp1 = EmpleadoTiempoCompleto("Ana", 1, 35000)
+    emp2 = EmpleadoTiempoMedido("Luis", 2, 76, 55)
+    emp3 = EmpleadoPrestacionServicios("Carlos", 3, 8000)
 
     print(f"{emp1.nombre} cobra: ${emp1.calcular_pago()}")
     print(f"{emp2.nombre} cobra: ${emp2.calcular_pago()}")
