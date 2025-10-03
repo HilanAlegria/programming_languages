@@ -66,7 +66,8 @@ class CuentaAhorros(Cuenta):
     porc_rend = 0.1
     
     def calcular_rendimiento(this):
-        # Ejecicion: implementar de acuerdo al atributo de clase propio de cuenta corriente
+        # Ejecicion: implementar de acuerdo al atributo de clase propio de cuenta ahorros
+        this.saldo = this.saldo * (1.0 + this.porc_rend)
         return super().calcular_rendimiento()
 
 class CuentaCorriente(Cuenta):
@@ -76,12 +77,23 @@ class CuentaCorriente(Cuenta):
     def consultar_saldo(this):
         # se sobreescribe:
         return super().consultar_saldo()
+    
     def calcular_rendimiento(this):
         # Ejecicion: implementar de acuerdo al atributo de clase propio de cuenta corriente
-        return super().calcular_rendimiento()
+        return "la cuenta corriente no genera rendimiento"
     
 cuenta1 = CuentaAhorros("Hilan", 248032, 180000000)
 cuenta2 = CuentaCorriente("Ana", 67890, 200000000)
 
-print(cuenta1.consultar_saldo())
-print(cuenta2.consultar_saldo())
+cuenta1.depositar(5000000)
+cuenta2.depositar(10000000)
+
+#--------- OJO: ---------
+# una interfaz es una clase abstracta que solo tiene metodos abstractos
+# una clase abstaracta es una abtsract base que puede tener ciertas implementaciones que pueden ser sobreeescritas o sobrecargadas
+#   (es una generarlización -> las subclases de extienden)
+
+# ejercicio 
+
+
+
