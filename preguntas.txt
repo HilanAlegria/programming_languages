@@ -1,0 +1,51 @@
+1. Implemente en Python el patrón Singleton para el control maestro del sistema,
+asegurando que solo exista una instancia que controle los subsistemas.
+Incluya comentarios explicativos.
+
+2. Escriba un ejemplo de código en Python donde el control maestro observe el estado
+de los subsistemas (luces, temperatura, residuos) usando el patrón Observer.
+Explique brevemente el propósito de este patrón en su implementación.
+
+3. En el contexto del sistema, ¿cómo se aplicaría correctamente el principio de
+Inversión de Dependencias (D) de SOLID?
+a.Usando herencia múltiple entre todos los subsistemas para compartir comportamiento común.
+b.Definiendo interfaces para los subsistemas (luces, acceso, temperatura, residuos) y haciendo que el control maestro dependa de esas abstracciones.
+c.Instanciando los subsistemas directamente dentro del controlador maestro sin interfaces intermedias.
+d.Haciendo que cada subsistema acceda directamente a las clases concretas del modelo.
+
+4. En el patrón singleton para el sistema de recompensas, ¿por qué se usa volatile?
+a.Porque es requerido por synchronized
+b.Para hacer más rápido el acceso
+c.Para evitar publicación incorrecta por reordenamiento de instrucciones
+
+5. En el patrón Modelo–Vista–Controlador (MVC) aplicado al sistema de automatización, el Modelo debería:
+a.Encargarse de mostrar alarmas visuales y notificaciones al usuario.
+b.Definir la interfaz de usuario y responder a eventos del usuario.
+c.Contener la lógica de negocio, datos y estados de los subsistemas (por ejemplo, luces, temperatura, residuos).
+d.Coordinar la comunicación entre vista y modelo sin manejar datos directamente.
+
+6. ¿Qué patrón de diseño sería más apropiado para garantizar que solo exista una
+única instancia del controlador maestro en todo el sistema?
+a.Patrón Strategy
+b.Patrón Observer
+c.Patrón Factory Method
+d.Patrón Singleton
+
+7. En el diseño del sistema de control maestro para la automatización de vivienda,
+el principio de Responsabilidad Única (Single Responsibility) implica que:
+a.Una clase puede asumir múltiples responsabilidades si están relacionadas con el mismo dominio.
+b.Una clase puede tener múltiples motivos de cambio siempre que cumpla con el patrón MVC.
+c.Todas las clases deben depender de una clase principal que controle todo el sistema.
+d.Cada clase debe encargarse de una única funcionalidad o razón de cambio dentro del sistema.
+
+8. Escriba una clase en Python que represente el subsistema de control de acceso,
+aplicando el principio de Responsabilidad Única y el patrón MVC. Incluya atributos,
+métodos y un ejemplo de uso.
+
+9. Implemente un fragmento de código que demuestre la aplicación del principio de
+Inversión de Dependencias entre el control maestro y el subsistema de luces,
+utilizando interfaces o clases abstractas.
+
+todos los resultados de las preguntas estan en el trabajo, llamar a home_controller.py / ligths.py
+
+y test_home_controller.py
